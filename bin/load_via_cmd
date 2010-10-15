@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$RIAK_HOME" ]; then
+   echo "RIAK_HOME is not set"
+   exit 1
+fi
+
+index=$1
+
+for x in `ls data/*.xml`; do
+    echo "indexing $x"
+    $RIAK_HOME/bin/search-cmd solr $index $x
+done
+

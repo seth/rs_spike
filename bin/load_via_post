@@ -1,0 +1,9 @@
+#!/bin/bash
+
+index=$1
+
+for x in `ls data/*.xml`; do
+    echo "indexing $x"
+    bin/post_to_riak $index $x
+done
+
