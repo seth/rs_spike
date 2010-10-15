@@ -1,0 +1,20 @@
+{
+  "normal": {
+    "quotes": "\"one\" \"two\" \"three\"",
+    "tag": "ack",
+    "multi_word": "bar foo"
+  },
+  "name": "ab",
+  "override": {
+  },
+  "default": {
+  },
+  "json_class": "Chef::Node",
+  "automatic": {
+  },
+  "run_list": [
+    "recipe[alpha]",
+    "recipe[bravo]"
+  ],
+  "chef_type": "node"
+}

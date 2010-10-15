@@ -1,0 +1,37 @@
+{
+  "normal": {
+    "nested": {
+      "b1": {
+        "b2": {
+          "a3": "B1_B2_A3-c"
+        },
+        "a2": {
+          "a3": "B1_A2_A3-c"
+        }
+      },
+      "a1": {
+        "b2": {
+          "a3": "A1_B2_A3-c"
+        },
+        "a2": {
+          "a3": "A1_A2_A3-c"
+        }
+      }
+    },
+    "tag": "apes",
+    "value": 3,
+    "multi_word": "foo"
+  },
+  "name": "c",
+  "override": {
+  },
+  "default": {
+  },
+  "json_class": "Chef::Node",
+  "automatic": {
+  },
+  "run_list": [
+    "recipe[charlie]"
+  ],
+  "chef_type": "node"
+}
