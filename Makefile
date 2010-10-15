@@ -11,8 +11,13 @@ schema:
 index:
 	bin/load_via_post n1
 	bin/load_via_cmd n2
+	$(SC) index txt data/a.txt
+	$(SC) index txt data/b.txt
 
 search:
 	-$(SC) search_doc n1 'X_CHEF_id_CHEF_X:a'
 	-$(SC) search_doc n2 'X_CHEF_id_CHEF_X:a'
 	-$(SC) search_doc n2 'X_CHEF_id_CHEF_X:foo_bar_baz'
+	-$(SC) search_doc txt 'name__=__a'
+	-$(SC) search_doc txt 'name__=__b'
+	-$(SC) search_doc txt 'value__=__1'
